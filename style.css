@@ -8,7 +8,9 @@
 }
 
 body {
-  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
+  font-family:
+    -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen, Ubuntu,
+    Cantarell, sans-serif;
   line-height: 1.6;
   color: #333;
   background: #f5f5f5;
@@ -178,16 +180,25 @@ h1 {
   border-radius: 12px;
   overflow: hidden;
   box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
-  text-decoration: none;
-  color: inherit;
-  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  transition:
+    transform 0.3s ease,
+    box-shadow 0.3s ease;
   display: flex;
   flex-direction: column;
+  position: relative;
 }
 
 .tile:hover {
   transform: translateY(-8px);
   box-shadow: 0 12px 24px rgba(0, 0, 0, 0.15);
+}
+
+.tile-link {
+  text-decoration: none;
+  color: inherit;
+  display: flex;
+  flex-direction: column;
+  flex: 1;
 }
 
 .tile-image {
@@ -243,6 +254,13 @@ h1 {
   display: flex;
   align-items: center;
   gap: 0.25rem;
+  text-decoration: none;
+  transition: opacity 0.3s ease;
+  z-index: 10;
+}
+
+.tile-license:hover {
+  opacity: 0.7;
 }
 
 .tile-license img {
@@ -361,6 +379,10 @@ h1 {
 
   .tile:hover {
     box-shadow: 0 12px 24px rgba(0, 0, 0, 0.5);
+  }
+
+  .tile-link {
+    color: #e0e0e0;
   }
 
   .tile-image {
