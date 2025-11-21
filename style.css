@@ -277,9 +277,11 @@ h1 {
 
 .tile-content {
   padding: 1.5rem;
+  padding-bottom: 4rem;
   display: flex;
   flex-direction: column;
   flex: 1;
+  position: relative;
 }
 
 .tile-content h2 {
@@ -306,8 +308,9 @@ h1 {
 }
 
 .tile-label {
-  margin-top: auto;
-  padding-top: 1rem;
+  position: absolute;
+  bottom: 1rem;
+  left: 1rem;
   font-size: 0.75rem;
   font-weight: 600;
   text-transform: uppercase;
@@ -324,6 +327,21 @@ h1 {
     color: #e0e0e0;
     background: #1a1a1a;
   }
+}
+
+/* License badge */
+.tile-license {
+  position: absolute;
+  bottom: 1rem;
+  right: 1rem;
+  display: flex;
+  align-items: center;
+  gap: 0.25rem;
+}
+
+.tile-license img {
+  height: 22px;
+  width: auto;
 }
 
 /* Responsive adjustments */
