@@ -1,1 +1,1 @@
-# Übersichtsseite alle Fallstudien
+# Übersichtsseite aller Fallstudien
