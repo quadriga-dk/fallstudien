@@ -1,10 +1,45 @@
-/* Reset and base styles */
+/* ==========================================================================
+   Reset and Base Styles
+   ========================================================================== */
+
 * {
   margin: 0;
   padding: 0;
 }
 
-/* Navigation bar */
+body {
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
+  line-height: 1.6;
+  color: #333;
+  background: #f5f5f5;
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+  min-width: 320px;
+  padding-bottom: 100px;
+}
+
+main {
+  flex: 1;
+  padding-bottom: 100px;
+}
+
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+h1 {
+  text-align: center;
+  margin-bottom: 3rem;
+  font-size: 2.5rem;
+  color: #2c3e50;
+}
+
+/* ==========================================================================
+   Navigation Bar
+   ========================================================================== */
+
 .navbar {
   background: white;
   box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
@@ -13,13 +48,6 @@
   top: 0;
   z-index: 100;
   min-height: 60px;
-}
-
-@media (prefers-color-scheme: dark) {
-  .navbar {
-    background: #2a2a2a;
-    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.3);
-  }
 }
 
 .nav-container {
@@ -56,28 +84,12 @@
   white-space: nowrap;
 }
 
-@media (prefers-color-scheme: dark) {
-  .nav-brand-text {
-    color: #e0e0e0;
-  }
-}
-
-
-
 .nav-logo {
   height: 240px;
   width: auto;
   display: block;
   margin-top: -90px;
   margin-bottom: -90px;
-}
-
-
-
-@media (prefers-color-scheme: dark) {
-  .nav-logo {
-    filter: invert(1) hue-rotate(180deg);
-  }
 }
 
 .nav-menu {
@@ -90,49 +102,6 @@
 
 .nav-item {
   flex-shrink: 0;
-}
-
-/* Responsive navbar - keep groups together as long as possible */
-@media (max-width: 900px) {
-  .nav-container {
-    padding: 0 0.5rem;
-    gap: 1rem;
-  }
-
-  .nav-menu {
-    gap: 1rem;
-  }
-
-  .nav-item a {
-    padding: 0 0.5rem;
-  }
-}
-
-/* Center nav-menu when it wraps below nav-brand */
-@media (max-width: 810px) {
-  .nav-container {
-    justify-content: center;
-  }
-
-  .nav-menu {
-    flex-basis: 100%;
-    justify-content: center;
-  }
-}
-
-/* Stack brand and menu vertically when too narrow */
-@media (max-width: 600px) {
-  .nav-container {
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    padding: 0.5rem;
-    gap: 0.5rem;
-  }
-
-  .nav-brand {
-    justify-content: center;
-  }
 }
 
 .nav-item a {
@@ -150,28 +119,15 @@
   background-color: rgba(52, 152, 219, 0.1);
 }
 
-@media (prefers-color-scheme: dark) {
-  .nav-item a {
-    color: #e0e0e0;
-  }
-
-  .nav-item a:hover {
-    color: #3498db;
-    background-color: rgba(52, 152, 219, 0.1);
-  }
-}
 .gh-logo {
   height: 16px;
   width: auto;
 }
 
-@media (prefers-color-scheme: dark) {
-  .gh-logo {
-    filter: invert(1) hue-rotate(180deg);
-  }
-}
+/* ==========================================================================
+   Footer
+   ========================================================================== */
 
-/* Footer */
 .footer {
   position: fixed;
   bottom: 0;
@@ -180,20 +136,12 @@
   box-shadow: 0 -2px 8px rgba(0, 0, 0, 0.1);
   padding: 1rem 0;
   z-index: 100;
-  margin: 0;
-}
-
-@media (prefers-color-scheme: dark) {
-  .footer {
-    background: #2a2a2a;
-    box-shadow: 0 -2px 8px rgba(0, 0, 0, 0.3);
-  }
 }
 
 .footer-content {
   max-width: 1200px;
   margin: 0 auto;
-  padding: 0 1rem; /* Added some horizontal padding */
+  padding: 0 1rem;
   text-align: center;
 }
 
@@ -202,66 +150,20 @@
   color: #666;
 }
 
-@media (prefers-color-scheme: dark) {
-  .footer-content p {
-    color: #e0e0e0;
-  }
-}
+/* ==========================================================================
+   Grid Layout
+   ========================================================================== */
 
-body {
-  font-family:
-    -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen, Ubuntu,
-    Cantarell, sans-serif;
-  line-height: 1.6;
-  color: #333;
-  background: #f5f5f5;
-  padding: 0;
-  display: flex;
-  flex-direction: column;
-  min-height: 100vh;
-  padding-bottom: 100px; /* Make space for fixed footer */
-}
-
-main {
-  flex: 1;
-  padding-bottom: 100px; /* Make space for fixed footer */
-}
-
-/* Dark mode */
-@media (prefers-color-scheme: dark) {
-  body {
-    color: #e0e0e0;
-    background: #1a1a1a;
-  }
-}
-
-/* Container */
-.container {
-  max-width: 1200px;
-  margin: 0 auto;
-}
-
-h1 {
-  text-align: center;
-  margin-bottom: 3rem;
-  font-size: 2.5rem;
-  color: #2c3e50;
-}
-
-@media (prefers-color-scheme: dark) {
-  h1 {
-    color: #e0e0e0;
-  }
-}
-
-/* Grid layout */
 .grid {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
   gap: 2rem;
 }
 
-/* Tile styles */
+/* ==========================================================================
+   Tile Styles
+   ========================================================================== */
+
 .tile {
   background: white;
   border-radius: 12px;
@@ -269,9 +171,7 @@ h1 {
   box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
   text-decoration: none;
   color: inherit;
-  transition:
-    transform 0.3s ease,
-    box-shadow 0.3s ease;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
   display: flex;
   flex-direction: column;
 }
@@ -281,17 +181,6 @@ h1 {
   box-shadow: 0 12px 24px rgba(0, 0, 0, 0.15);
 }
 
-@media (prefers-color-scheme: dark) {
-  .tile {
-    background: #2a2a2a;
-    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.3);
-  }
-
-  .tile:hover {
-    box-shadow: 0 12px 24px rgba(0, 0, 0, 0.5);
-  }
-}
-
 .tile-image {
   width: 100%;
   height: 200px;
@@ -299,13 +188,6 @@ h1 {
   background-position: center;
   background-repeat: no-repeat;
   background-color: white;
-}
-
-@media (prefers-color-scheme: dark) {
-  .tile-image {
-    background-color: #d5d5d5;
-    filter: invert(1) hue-rotate(180deg);
-  }
 }
 
 .tile-content {
@@ -330,16 +212,6 @@ h1 {
   flex: 1;
 }
 
-@media (prefers-color-scheme: dark) {
-  .tile-content h2 {
-    color: #e0e0e0;
-  }
-
-  .tile-content p {
-    color: #e0e0e0;
-  }
-}
-
 .tile-label {
   position: absolute;
   bottom: 1rem;
@@ -355,14 +227,6 @@ h1 {
   width: fit-content;
 }
 
-@media (prefers-color-scheme: dark) {
-  .tile-label {
-    color: #e0e0e0;
-    background: #1a1a1a;
-  }
-}
-
-/* License badge */
 .tile-license {
   position: absolute;
   bottom: 1rem;
@@ -377,7 +241,24 @@ h1 {
   width: auto;
 }
 
-/* Responsive adjustments */
+/* ==========================================================================
+   Responsive Design
+   ========================================================================== */
+
+@media (max-width: 860px) {
+  .nav-container {
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 0.5rem;
+    gap: 0.5rem;
+  }
+
+  .nav-brand {
+    justify-content: center;
+  }
+}
+
 @media (max-width: 768px) {
   h1 {
     font-size: 2rem;
@@ -387,6 +268,13 @@ h1 {
   .grid {
     grid-template-columns: 1fr;
     gap: 1.5rem;
+  }
+}
+
+@media (max-width: 530px) {
+  .nav-brand {
+    flex-direction: column;
+    gap: 0.5rem;
   }
 }
 
@@ -401,5 +289,77 @@ h1 {
 
   .tile-image {
     height: 160px;
+  }
+}
+
+/* ==========================================================================
+   Dark Mode
+   ========================================================================== */
+
+@media (prefers-color-scheme: dark) {
+  body {
+    color: #e0e0e0;
+    background: #1a1a1a;
+  }
+
+  h1 {
+    color: #e0e0e0;
+  }
+
+  .navbar {
+    background: #2a2a2a;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.3);
+  }
+
+  .nav-brand-text {
+    color: #e0e0e0;
+  }
+
+  .nav-logo {
+    filter: invert(1) hue-rotate(180deg);
+  }
+
+  .nav-item a {
+    color: #e0e0e0;
+  }
+
+  .gh-logo {
+    filter: invert(1) hue-rotate(180deg);
+  }
+
+  .footer {
+    background: #2a2a2a;
+    box-shadow: 0 -2px 8px rgba(0, 0, 0, 0.3);
+  }
+
+  .footer-content p {
+    color: #e0e0e0;
+  }
+
+  .tile {
+    background: #2a2a2a;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.3);
+  }
+
+  .tile:hover {
+    box-shadow: 0 12px 24px rgba(0, 0, 0, 0.5);
+  }
+
+  .tile-image {
+    background-color: #d5d5d5;
+    filter: invert(1) hue-rotate(180deg);
+  }
+
+  .tile-content h2 {
+    color: #e0e0e0;
+  }
+
+  .tile-content p {
+    color: #e0e0e0;
+  }
+
+  .tile-label {
+    color: #e0e0e0;
+    background: #1a1a1a;
   }
 }
