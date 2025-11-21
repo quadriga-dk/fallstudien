@@ -194,11 +194,18 @@ h1 {
 }
 
 .tile-link {
-  text-decoration: none;
+  text-decoration: none !important;
   color: inherit;
   display: flex;
   flex-direction: column;
   flex: 1;
+}
+
+.tile-link:hover,
+.tile-link:focus,
+.tile-link:active,
+.tile-link:visited {
+  text-decoration: none !important;
 }
 
 .tile-image {
