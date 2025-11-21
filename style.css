@@ -150,6 +150,15 @@ h1 {
   color: #666;
 }
 
+.footer-content a {
+  color: #2c3e50;
+  text-decoration: underline;
+}
+
+.footer-content a:hover {
+  color: #3498db;
+}
+
 /* ==========================================================================
    Grid Layout
    ========================================================================== */
@@ -334,6 +343,15 @@ h1 {
 
   .footer-content p {
     color: #e0e0e0;
+  }
+
+  .footer-content a {
+    color: #5dade2;
+    text-decoration: underline;
+  }
+
+  .footer-content a:hover {
+    color: #85c1e9;
   }
 
   .tile {
